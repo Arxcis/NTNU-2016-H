@@ -1,0 +1,20 @@
+
+
+# Title : resources.txt
+# Date  : 25.08.16
+# Author: Jonas Solsvik
+
+# Description: Contains information of all web-recourses, and other recourses, used to complete this project.
+
+
+
+URLS are in this format:
+
+Title         topdomain                  full url
+------------------------------------------------------------------
+
+require_once   php.net            http://php.net/manual/en/function.require-once.php
+require        php.net            http://php.net/manual/en/function.require.php
+include        php.net            http://php.net/manual/en/function.include.php
+PDO Tutorial  wiki.hashphp.com    http://wiki.hashphp.org/PDO_Tutorial_for_MySQL_Developers
+PDO Mysql DSN  php.net            http://php.net/manual/en/ref.pdo-mysql.connection.php

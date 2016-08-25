@@ -1,0 +1,126 @@
+
+Rapport Oblig 1:
+
+Krav: 
+- Innlevering skal være i PDF format
+- Navnekonvensjon: Oblig1_etternavn_studentnummer.pdf
+
+------------
+DEL 1
+-----------
+
+Oppgave 1 - skaffe tilgang til en database  - CHECK:
+
+ - Bruker database-miljø som allerede er satt opp på maskinen.
+ - MAMP - Apache server
+        - MySQL server
+        - InnoDB
+        - phpMyAdmin
+        
+
+Oppgave 2 - bli kjent med phpMyAdmin brukergrensesnitt - CHECK:
+
+- Har brukt dette mye fra tidligere jobbsammenheng.
+
+Oppgave 3 - Importer database - CHECK
+
+Oppgave 4 - Installer demoaplikasjon - CHECK
+    
+    - gjøre kjent med MVC - CHECK
+    - Gjøre kjent med plain - CHeck
+
+-------------------------
+        DEL 2 
+------------------------
+
+Oppgave 1 - Bli kjent med HTML - CHECK
+Oppgave 2 - Bli kjent med PHP - CHECK
+Oppgave 3 - Bli kjent med MVC - CHECK
+
+Oppgave 4 - Bli kjent med PDO - CHECK
+
+    Connect:
+        $db = new PDO('mysql:host=localhost;dbname=testdb;charset=utf8mb4', 'username', 'password');
+
+    Error handling:
+        catch(PDOException $ex)
+
+    Fetch:
+        1.
+        $db->query('SELECT * FROM table')     
+
+        2. 
+        $stmt = $db->query('SELECT * FROM table');    //  Why use this more complicated ? 
+        $row = $stmt->fetch(PDO::FETCH_ASSOC)
+
+        3.
+        $stmt = $db->query('SELECT * FROM table');    // Fetchall
+        $results = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+
+        - FETCH ASSOC - Fetch associetive array.
+
+
+        - The $db->query() returns a statement object.
+        The statement object has usefull methods
+
+        $row_count = $stmt->rowCount();
+
+
+        - Db object methods
+        $insertId = $db->lastInsertId();
+
+
+        ??  $db->exec()   VS   $db->query()   VS $db->prepare() and $db->execute()  ?? 
+
+
+
+---------------------------------------
+    DEL 3 -- LAG DATABASEAPPLIKASJON
+--------------------------------------
+
+Krav til programkoden:
+ Dere skal bruke PDO (ikke mysql- eller mysqli-bibliotekene).
+ Dere skal avvise blog-innlegg dersom ikke brukeren har fylt inn alle feltene i formen.
+ Dere skal håndtere mulige databasefeil (f.eks. skal ikke koden kræsje men gi en fornuftig feilmelding dersom databasen av en eller annen grunn er nede).
+ Dere må bruke prepared statements i PDO for å unngå at sluttbrukeren forsøker å legge inn data som skaper problemer for systemet deres.
+
+
+Oppgave 1 - Lag database for bloggaplikasjonen.
+-----------------------------------------------
+
+Oppretter tabellen:
+    
+    blogginnlegg
+    charset         utf-8-general-ci
+
+Har satt opp følgende felter: 
+
+    ID                 int  (11)  AUTO_INCREMENT
+    Tittel         varchar  (255)
+    Innhold        text
+    ForfatterNavn  varchar  (255)
+    ForfatterEpost varchar  (255)
+    PubTime        timestamp        CURRENT_TIMESTAMP
+    EditTime       timestamp
+
+
+Har lagret dette i blogginnlegg.sql
+
+
+
+Oppgave 2 - Lag PHP-kode til å vise Blogginnleggene
+--------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
