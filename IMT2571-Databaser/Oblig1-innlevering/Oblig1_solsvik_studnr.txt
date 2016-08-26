@@ -110,7 +110,33 @@ Har lagret dette i blogginnlegg.sql
 
 
 Oppgave 2 - Lag PHP-kode til å vise Blogginnleggene
---------------------------------------------------
+---------------------------------------------------
+
+Jeg har valgt å gå for en blanding mellom plain-modellen og MVC-modellen i eksempelet som ble gitt i til denne oppgaven, men den ligner mest på MVC-modellen.
+
+
+/model: 
+  
+  I '/model' så bruker jeg en Klassse til å beskrive bloggInnlegg-tabellen i databasen, og alle operasjonene på denne (CRUD - Create Read Update Delete). Dette samsvarer med hvordan det er gjort i MVC-eksempelet.
+
+  Jeg har 
+
+/view:
+    I '/view' så bruker jeg templates som inneholder mest HTML og CSS, og så litt PHP kode innimellom for å ta seg av det som skal være dynamisk innhold. Jeg vurderte denne måten å gjøre det på opp mot hvordan det er gjort i MVC-eksempelet med klasser.
+     
+    Lettere å lese: 
+      Slik jeg har gjort det, så er koden enklere å lese, dersom en har jobbet mye med HTML og CSS. Det er enklere å se for seg hvordan koden kommer til å se ut på skjermen.
+
+    Raskere å utvikle:
+      I mitt tilfelle så går ting mye fortere når jeg kan skriver HTML direkte, istedet for å organisere det via PHP-klasser. 
+
+    Mindre skalerbart/robust: 
+      Det kan tenkes at koden ikke er så enkel å utvide/gjenbruke, siden den ikke er organisert i klasser. 
+
+
+index.php:
+  Fungerer i dette tilfellet som en super-primitiv kontroller. 
+   
 
 
 
