@@ -3,9 +3,12 @@
  *   
  * @author  Jonas Solsvik
  * @version 1.0
- * @created 25.05.16
- * @file    Index.php
- * @description 
+ * @uses viewBlog.php
+ *
+ * File    Index.php
+ * Created 25.05.16
+ *
+ * Description 
  *      This is the server-root index.php.
  *      The purpose of index.php is to be the landing page for the domain.
  *      It handles all traffic to the http://domain.xyz/ - root HTTP path.
@@ -13,7 +16,8 @@
  *      can be modified to the authors liking.
  */
 
-$index_path = "view/blogView.php";
+
+$index_path = 'Location: view/viewBlog.php';
 
 /* 
  *   About require and require_once:
@@ -27,8 +31,20 @@ $index_path = "view/blogView.php";
  *   require_once make sure to check if a document has already been loaded, and will 
  *   not load it again if this is true.
  *
-*/
+ *    NOTE: Require_once has been substituted with header(),
+ *           as a method of routing to a landing page. After some testing 
+ *            it was discovered that using require_once for this purpose, created inconsistent
+ *             filepaths, across multiple pages. This could probably have been solved with
+ *              structuring the system somewhat differentyl, but an easier solution was chosen
+ *               short-term.
+ *    
+ *     
+ *   From php.net: header() is used to send a raw HTTP header.
+ *                  In practice the script changes the server location to a chosen address.
+ */   
 
-require_once $index_path;
+//require_once('view/viewBlog.php');
+
+header('Location:  view/viewBlog.php');
 
 ?>

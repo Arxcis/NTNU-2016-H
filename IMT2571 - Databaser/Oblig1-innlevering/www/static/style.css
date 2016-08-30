@@ -1,0 +1,129 @@
+/*  static.css */
+
+
+ html {
+    display: flex; 
+    justify-content: center;
+
+    font-family: sans-serif;
+    color: #f2f2f2;
+    height: 2000px;
+
+    background-image: url("diver.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+body {flex: 1;}
+
+header {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    width: 100%;
+    font-size: 20px;
+    margin-top: 130px;
+    margin-bottom: 50px;
+} 
+
+main {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+a {text-decoration: none;
+    color: #f2f2f2;}
+
+
+.blogginnlegg {
+
+    width: 70%;
+    margin-top: 20px;
+    padding: 20px;
+}
+
+.whitebg {
+
+    border-radius: 3px;
+    color: #737373;
+    background-color: #f2f2f2;
+}
+
+.transparentbg {
+
+    border-radius: 3px;
+    color: #f2f2f2;
+    background-color: rgba(0,0,0,0.5);
+    border: 0px !important;
+}
+
+.megabutton {
+
+    text-align: center; 
+    width: 73%;
+    font-size: 20px;
+    border: 0px;
+}
+
+.hoverme:hover {
+    background-color: rgba(0,0,0,0.7); 
+    cursor: pointer;}
+
+textarea:hover {
+    background-color: rgba(0,0,0,0.7); 
+}
+
+
+/* ----------------------------- */
+/* newPostView.php specific stuff*/
+/* ----------------------------- */
+
+#newpostform {
+
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    width: 700px;
+}
+
+    #newposttitle {
+
+        flex: 0 1 700px;
+
+        font-size: 30px;
+        padding: 10px;
+        text-align:center;
+        border: 1px solid white;
+    }
+
+    #newpostarea {
+
+        flex: 0 1 700px;
+
+        padding: 10px;
+        font-size: 20px;
+        min-height: 300px;
+        margin-top: 10px;
+    }
+
+    #newpostsubmit {
+
+        flex: 0 1 700px;
+
+        font-size: 20px;
+        margin-top: 10px;
+        border: 1px solid white;
+    }
+
+
+
+
+
+
+
