@@ -1,0 +1,121 @@
+
+<!DOCTYPE html5>
+<html>
+    <head>
+        <!-- asdf-->
+    <style>
+        html {
+
+            min-width: 100%;
+            min-height: 100%;
+        }
+
+        body {
+            display:flex;   /* INITIATOR FLEXBOX */
+            flex-direction: row;
+            align-items: stretch;            /* sideways axis*/
+            justify-content: space-around;   /* forward axis */
+        }
+
+        .blob {flex: 0 0 100px;}  /* flex-grow, flex-shrink og flex-basis */
+
+        #blob1 {background-color: red;
+            align-self: flex-end;
+     
+        }
+        #blob2 {background-color: hotpink;
+          
+            }
+        #blob3 {background-color: blue;
+       
+
+    </style>
+
+    <!--JQUERY -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"> </script>
+    </head>
+
+    <body>
+
+    <video autoplay></video>
+
+    <script>
+
+          var errorCallback = function(e) {
+                console.log('Reeeejected!', e);
+            };
+
+            navigator.getUserMedia  = navigator.getUserMedia ||
+                          navigator.webkitGetUserMedia ||
+                          navigator.mozGetUserMedia ||
+                          navigator.msGetUserMedia;
+
+            var video = document.querySelector('video');
+
+            if (navigator.getUserMedia) {
+            navigator.getUserMedia({audio: true, video: true}, function(stream) {
+            video.src = window.URL.createObjectURL(stream);
+
+            }, errorCallback);
+            } else {
+                video.src = 'somevideo.webm'; // fallback.
+            }
+    </script>
+
+
+
+        <div id="blob1" class="blob">test</div>
+        <div id="blob2" class="blob">test</br>test</br>test</br>test</br></div>
+        <div id="blob3" class="blob">test</div>
+
+    </body>
+
+
+
+<script type="text/javascript"> 
+        
+        $(document).keydown(function( event ){
+
+            button_in = event.which;
+
+            switch(button_in){
+
+                case 37:
+                    $('#blob1').css('align-self', 'stretch');
+                    break;
+
+                case 38:
+                    $('#blob2').css('align-self', 'stretch');
+                    break;
+
+                case 39:
+                    $('#blob3').css('align-self', 'stretch');
+                    break;
+
+            }
+        });
+
+        $(document).keyup(function( event ){
+
+            button_in = event.which;
+
+            switch(button_in){
+
+                case 37:
+                    $('#blob1').css('align-self', 'flex-end');
+                    break;
+
+                case 38:
+                    $('#blob2').css('align-self', 'flex-end');
+                    break;
+
+                case 39:
+                    $('#blob3').css('align-self', 'flex-end');
+                    break;
+
+            }
+        });
+
+</script>
+
+</html>
