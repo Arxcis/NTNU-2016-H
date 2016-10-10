@@ -76,7 +76,7 @@ struct Cube {
                                         0.0, 0.0, 0.0, 1.0       };
 
 
-    double  viewMatrix      [16] = {  1.0, 0.0, 0.0,    ∂((position->x) - (camera->pos.x)),
+    double  viewMatrix      [16] = {  1.0, 0.0, 0.0,    ((position->x) - (camera->pos.x)),
                                       0.0, 1.0, 0.0,     (position->y - camera->pos.y),
                                       0.0, 0.0, 1.0,     (position->z - camera->pos.z),
                                       0.0, 0.0, 0.0, 1.0                         };
